@@ -1,23 +1,24 @@
-import React from "react";
-import { makeStyles, createStyles } from "@material-ui/core/styles";
-import LinearProgress from "@material-ui/core/LinearProgress";
+import React from 'react';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 const useStyles = makeStyles((theme) => {
   return createStyles({
     bar: {
-      with: "100%",
-      "& > * + *": {
+      width: '100%',
+      '& > * + *': {
         marginTop: theme.spacing(2),
       },
     },
   });
 });
 
-export default function Progress() {
+export default () => {
   const classes = useStyles();
+
   return (
     <div className={classes.bar}>
       <LinearProgress />
     </div>
   );
-}
+};
